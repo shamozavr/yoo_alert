@@ -1,0 +1,29 @@
+{
+  "name": "Yoo_Alert",
+  "description": "extention that sends message to telegram chat if user gets message in yokassa chat",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "./favicon_io/favicon-16x16.png",
+    "32": "./favicon_io/favicon-32x32.png",
+    "192": "./favicon_io/android-chrome-192x192.png",
+    "512": "/favicon_io/android-chrome-512x512.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "./js/background.js"
+  },
+  "permissions": ["storage", "activeTab", "declarativeContent", "webNavigation", "scripting"],
+  "host_permissions": [
+    "https://cc.yooteam.ru/cc-chat",
+    "https://api.telegram.org/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://cc.yooteam.ru/cc-chat"],
+      "js": ["./js/content.js"]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+html {
+  background-color: white;
+}
+
+img {
+  display: block;
+}
+
+body {
+  width: 550px;
+  height: 200px;
+  margin: 0;
+  padding: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 15px;
+  background: linear-gradient(90deg, #09152F 0%, #09152F 100%);
+  font-family: 'Factor IO', Helvetica, Arial, sans-serif;
+}
+
+.close {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.close:hover {
+  opacity: 0.7;
+}
+
+.token {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.token__label {
+  font-size: 14px;
+  line-height: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.token__input {
+  width: 400px;
+  margin-top: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: black;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.buttons__button {
+  width: 120px;
+  height: 42px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.buttons__button:hover {
+  opacity: 0.7;
+}
